@@ -12,9 +12,52 @@
 }
 
 .team-cards--team-name{
-    margin: 2% 0% 0% 0%;
+    margin: 3% 0% 0% 0%;
 }
 
-.container{
+.match-card--container{
     display: flex;
+    align-items: center;
+    margin: 4% 0% 4% 0%;
+}
+
+.status-card{
+    background-color: #8F1B3E;
+    padding: 1% 4% 1% 4%;
+    border-radius: 10%;
+    display: flex;
+}
+
+.status-card--score {
+    margin-top: 8%;
+    width: 57px;
+    display: flex;
+    justify-content: center;
+}
+
+.playing-status-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.playing-status-container{
+    display: flex;
+    align-items: center;
+}
+
+.playing-status--top{
+    background-color: #7D1937;
+    font-size: 12px;
+    padding: 10% 28% 10% 28%;
+    border-radius: 10% 10% 0% 0%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    width: 107%;
+}
+
+.playing-status--bottom{
+    background-color: #8F1B3E;
+    padding: 10% 64% 10% 64%;
+    border-radius: 0% 0% 10% 10%;
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/qatar2022');    
+/* @import url('https://fonts.cdnfonts.com/css/qatar2022');     */
 
 body{
     background: linear-gradient(180deg, #891739 12.5%, #1E0C15 100%);
@@ -7,4 +7,4 @@ body{
     background-color: currentcolor;
     color: white; /*font color*/
     font-family: 'Qatar2022', sans-serif;
-}
+}   
