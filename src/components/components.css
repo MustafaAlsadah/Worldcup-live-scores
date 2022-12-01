@@ -1,0 +1,20 @@
+.navbar{
+    background-color: rgba(3, 207, 184, 1);
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 6% 3% 6%;
+}
+
+.team-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-cards--team-name{
+    margin: 2% 0% 0% 0%;
+}
+
+.container{
+    display: flex;
+}
