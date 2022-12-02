@@ -23,6 +23,7 @@ export default function PlayingStatus(props){
             <div className="playing-status--top">
                  {gameStatus=="FINISHED" && <img id="circle-img" src={grayCircle } alt="" />}
                  <span className="green-circle-img">{matchIsInPlay && <img id="circle-img" src={greenCircle} alt="" />}</span>
+                 &nbsp;
                  <span id="status-badge">{badgeText}</span>
                  
             </div>

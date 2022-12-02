@@ -18,7 +18,7 @@ function HomePage() {
     }
   }, []);  
 
-  let baseUrl = "http://api.football-data.org/v4/competitions/2000";
+  let baseUrl = "https://api.football-data.org/v4/competitions/2000";
   
   const [todayMatchesArray, setTodayMatchesArray] = React.useState([]);
   
@@ -29,8 +29,7 @@ function HomePage() {
           {
               headers: {
                   "X-Auth-Token": "418737ec05fd43bc9a0add42b8df40f2"
-              },
-              referrerPolicy: "unsafe_url"
+              }
           }
       ).then((res)=>{
           return res.json();
@@ -62,6 +61,9 @@ function HomePage() {
 
   return (
     <div className="homepage-container">
+      <head>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+      </head>
       <Navbar/>
         <div className='homepage-header'>
           <h2>Matches Schedule</h2>

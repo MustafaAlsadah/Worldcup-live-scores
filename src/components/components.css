@@ -53,7 +53,7 @@
     display: flex;
     align-items: baseline;
     justify-content: space-evenly;
-    width: 107%;
+    width: 150%;
 }
 
 .playing-status--bottom{
