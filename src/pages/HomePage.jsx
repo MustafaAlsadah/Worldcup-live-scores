@@ -29,7 +29,8 @@ function HomePage() {
           {
               headers: {
                   "X-Auth-Token": "418737ec05fd43bc9a0add42b8df40f2"
-              }
+              },
+              referrerPolicy: "unsafe_url"
           }
       ).then((res)=>{
           return res.json();
