@@ -41,23 +41,27 @@
 }
 
 .playing-status-container{
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
+}
+
+span#status_badge{
+    width: max-content;
 }
 
 .playing-status--top{
     background-color: #7D1937;
     font-size: 12px;
-    padding: 10% 28% 10% 28%;
+    /* padding: 10% 28% 10% 28%; */
     border-radius: 10% 10% 0% 0%;
     display: flex;
     align-items: baseline;
     justify-content: space-evenly;
-    width: 150%;
 }
 
 .playing-status--bottom{
     background-color: #8F1B3E;
-    padding: 10% 64% 10% 64%;
+    /* padding: 10% 64% 10% 64%; */
     border-radius: 0% 0% 10% 10%;
+    text-align: center;
 }
