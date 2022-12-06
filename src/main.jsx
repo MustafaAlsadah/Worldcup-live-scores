@@ -6,12 +6,13 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import StandingsPage from './pages/StandingsPage';
  
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage/>,
+    element: <StandingsPage/>,
   },
 ]);
 
