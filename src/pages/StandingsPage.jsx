@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import ScheduleTable from '../components/ScheduleTable'
+import CollapseListStandings from '../components/CollapseListStandings'
 
 
 
@@ -40,14 +41,14 @@ const StandingsPage = () => {
         return standingProps ;
     });
 
-    function getTabels(){
-        let tabels =[]
-        {standings.forEach((stand)=>{
-           tabels.push( <ScheduleTable probs={stand.teams} />) 
-           { console.log(stand.teams)}
-})}
-        console.log(tabels);
-    }
+//     function getTabels(){
+//         let tabels =[]
+//         {standings.forEach((stand)=>{
+//            tabels.push( <ScheduleTable probs={stand.teams} />) 
+//            { console.log(stand)}
+// })}
+//         // console.log(tabels);
+//     }
 
     
 
@@ -73,9 +74,10 @@ const StandingsPage = () => {
         <div className="warpper">
             <div className="accordion">
                 
-            {standings.map((stand)=>(
-            <ScheduleTable probs={stand.teams} /> 
-))}                
+            {/* {standings.map((stand,index)=>( */}
+            {/* {console.log(standings)}. */}
+            <CollapseListStandings probs={standings} /> 
+            {/* ))} */}
             </div>
         </div>
     </div>

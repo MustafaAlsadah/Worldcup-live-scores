@@ -6,9 +6,9 @@ const ScheduleTable = ({probs}) => {
   const heders=["Team","PI","W","D","L","+/-","PTS"];
   console.log("heelo")
   
-  probs.map((standsItem,index)=>{
-    console.log(standsItem.team.name)
-})
+//   probs.map((standsItem,index)=>{
+//     console.log(standsItem.team.name)
+// })
 
   return (
     <div className='warpper'>
