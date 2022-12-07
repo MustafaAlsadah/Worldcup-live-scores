@@ -3,8 +3,8 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import ScheduleTable from '../components/ScheduleTable'
 import CollapseListStandings from '../components/CollapseListStandings'
-
-
+import StandingsTitleAndButtons from '../components/StandingsTitleAndButtons'
+import "../components/components.css"
 
 const StandingsPage = () => {
 
@@ -65,23 +65,37 @@ const StandingsPage = () => {
     //   });
 
 
+    return (
+        <div >
+            <Navbar />
+            <StandingsTitleAndButtons />
 
+                <div>
+                    
+                {/* {standings.map((stand,index)=>( */}
+                {/* {console.log(standings)}. */}
+                <CollapseListStandings probs={standings} /> 
+                {/* ))} */}
+                </div>
 
-
-  return (
-    <div className="warpper">
-        <Navbar />
-        <div className="warpper">
-            <div className="accordion">
-                
-            {/* {standings.map((stand,index)=>( */}
-            {/* {console.log(standings)}. */}
-            <CollapseListStandings probs={standings} /> 
-            {/* ))} */}
-            </div>
         </div>
-    </div>
-  )
+      )
+
+
+//   return (
+//     <div className="warpper">
+//         <Navbar />
+//         <div className="warpper">
+//             <div className="accordion">
+                
+//             {/* {standings.map((stand,index)=>( */}
+//             {/* {console.log(standings)}. */}
+//             <CollapseListStandings probs={standings} /> 
+//             {/* ))} */}
+//             </div>
+//         </div>
+//     </div>
+//   )
 }
 
 export default StandingsPage

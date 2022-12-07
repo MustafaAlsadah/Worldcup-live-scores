@@ -1,0 +1,33 @@
+.red{
+    /* background: red; */
+    background:transparent
+}
+
+.green{
+    background: rgba(3, 207, 184, 1);
+
+    
+}
+
+.shape{
+
+    border-radius: 10px;
+    width: 40%;
+    margin: 0.5rem 0.5rem 2rem 0.5rem;
+    padding: 0.35rem;
+    color: white;
+    border:2px solid rgba(3, 207, 184, 1);
+    font-size: 18px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+
+}
+
+.Stitle{
+     margin: 1.5rem;
+     font-size: 32px;
+     color: white;
+}
