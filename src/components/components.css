@@ -24,7 +24,7 @@
 .status-card{
     background-color: #8F1B3E;
     padding: 1% 4% 1% 4%;
-    border-radius: 10%;
+    border-radius: 1.5vw;
     display: flex;
 }
 
@@ -53,10 +53,22 @@ span#status_badge{
     background-color: #7D1937;
     font-size: 12px;
     /* padding: 10% 28% 10% 28%; */
-    border-radius: 10% 10% 0% 0%;
+    border-radius: 1vw 10% 0% 0%;
     display: flex;
     align-items: baseline;
     justify-content: space-evenly;
+    width: max-content;
+}
+
+.top-status-container {
+    text-align: center;
+    width: 20vw;
+    font-size: x-small;
+    padding: 5% 0% 4% 0%;
+}
+
+.bottom-status-container {
+    padding: 6%;
 }
 
 .playing-status--bottom{
