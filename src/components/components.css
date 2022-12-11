@@ -11,8 +11,17 @@
     align-items: center;
 }
 
+.team-card-table{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .team-cards--team-name{
     margin: 3% 0% 0% 0%;
+}
+.team-cards-table--team-name{
+    margin: 3% 0% 0% 5%;
 }
 
 .match-card--container{

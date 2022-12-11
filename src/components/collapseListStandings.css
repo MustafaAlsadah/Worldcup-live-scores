@@ -1,0 +1,111 @@
+/* * { outline: 1px solid rgba(255,0,0,.2);} :hover { outline: 1px solid rgba(255,0,0,0.6); } 
+* * { outline: 1px solid rgba(0,255,0,.2);} :hover { outline: 1px solid rgba(0,255,0,0.6); } 
+* * * { outline: 1px solid rgba(0,0,255,.2);} :hover { outline: 1px solid rgba(0,0,255,0.6); }
+* * * * { outline: 1px solid rgba(255,0,255,.2);} :hover { outline: 1px solid rgba(255,0,0,0.6); } 
+* * * * * { outline: 1px solid rgba(0,255,255,.2);} :hover { outline: 1px solid rgba(0,255,0,0.6); } 
+* * * * * * { outline: 1px solid rgba(255,255,0,.2);} :hover { outline: 1px solid rgba(0,0,255,0.6); }
+* * * * * * * { outline: 1px solid rgba(255,0,0,.2);} :hover { outline: 1px solid rgba(255,0,0,0.6); } 
+* * * * * * * * { outline: 1px solid rgba(0,255,0,.2);} :hover { outline: 1px solid rgba(0,255,0,0.6); } 
+* * * * * * * * * { outline: 1px solid rgba(0,0,255,.2);} :hover { outline: 1px solid rgba(0,0,255,0.6); } */
+/* 
+*{
+    margin :0  !important; 
+    padding: 0  !important;
+} */
+
+div >div>div >div>div>div>div>div>div> *  { margin: 0; padding: 0 ;}
+
+
+.warpper{
+     /* display: flex; */
+    /* flex-direction: row;  */
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+
+}
+
+.accordion{
+    /* width: 500px;     */
+    /* padding: 2px; */
+
+    
+ 
+}
+
+.item{
+    /* background: #8F1B3E; */
+    /* margin-bottom: 5px; */
+    margin: 2px 0px;
+    /* padding-bottom: 5px ; */
+    /* padding: 10px 20px; */
+    /* text-align: center; */
+    /* display: flex; */
+    
+
+ ;
+    
+    
+}
+
+.h2{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.title{
+    background: rgba(3, 207, 184, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    color: white;
+
+
+
+    
+    
+    
+    
+}
+.content{
+    color: white;
+    /* background: #7D1937; */
+    max-height: 0;
+    overflow: hidden;
+    /* transform: all 0.5s cubic-bezier(0,1,0,1); */
+    background: linear-gradient(180deg, #891739 12.5%, #1E0C15 200%);
+    overflow:hidden;
+    transition:0.5s linear;
+
+}
+.content.show{
+    width: 100vw;
+    max-height: 38.5vh;
+    
+    /* transform: all 0.5s cubic-bezier(1,0,1,0); */
+
+}
+
+
+
+/* .test{
+    background:chartreuse; 
+    color: chartreuse;
+}
+
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background-color: #29008a;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+
+.accordion{
+    background: red;
+} */

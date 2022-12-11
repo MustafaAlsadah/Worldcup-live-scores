@@ -6,13 +6,29 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
- 
+import StandingsPage from './pages/StandingsPage';
+import News from './pages/News';
+import NewsPage from './pages/NewPage';
+import data from "./components/News.json"
+
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/", 
     element: <HomePage/>,
   },
+  {
+    path:"StandingsPage",
+    element: <StandingsPage/>
+  },{
+    path:"News",
+    element: <News/>
+  }, 
+
+  {
+    path:"/NewsPage/",
+    element:<NewsPage/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
