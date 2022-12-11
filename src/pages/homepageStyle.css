@@ -3,6 +3,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    padding: 1rem;
+    color: white;
 }
 
 .vertical-flex{
@@ -33,5 +35,11 @@ input[type="date"]{
 
 .homepage-match-cards{
     padding-top: 2%;
+<<<<<<< HEAD
 }
 
+=======
+    color: white;
+
+}
+>>>>>>> 9f0dc299abb79a21bc46925efea01633d690d654
