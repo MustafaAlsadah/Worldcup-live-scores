@@ -1,0 +1,11 @@
+.space {
+  padding-top: 50px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

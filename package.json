@@ -20,13 +20,14 @@
     "react": "^18.2.0",
     "react-axios": "^2.0.6",
     "react-bootstrap": "^2.6.0",
+    "react-countdown": "^2.3.5",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.4.3",
     "react-script": "^2.0.5",
     "react-string-replace": "^1.1.0",
     "reactstrap": "^9.1.5",
-    "sort-by": "^1.2.0"
+    "sort-by": "^0.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",

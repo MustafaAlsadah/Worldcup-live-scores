@@ -1,40 +1,48 @@
-.homepage-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 1rem;
-    color: white;
+.homepage-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  color: white;
 }
 
-.vertical-flex{
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
 }
 
-.horizontal-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.horizontal-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-input[type="date"]{
-    background-color: #8F1B3E;
-    border-radius: 5px;
-    border-color: transparent;
-    filter: drop-shadow(0px 0px 4px #62112A);
-    padding: 1.5%;
-    color: white;
+input[type='date'] {
+  background-color: #8f1b3e;
+  border-radius: 5px;
+  border-color: transparent;
+  filter: drop-shadow(0px 0px 4px #62112a);
+  padding: 1.5%;
+  color: white;
 }
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
 ::-webkit-calendar-picker-indicator {
-    background-color: #40BDAD;
-    border-radius: 3px;
-    padding: 2%;
+  background-color: #40bdad;
+  border-radius: 3px;
+  padding: 2%;
 }
 
-.homepage-match-cards{
-    padding-top: 2%;
-    color: white;
-
+.homepage-match-cards {
+  padding-top: 2%;
+  color: white;
 }
