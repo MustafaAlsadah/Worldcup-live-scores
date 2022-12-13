@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import StandingsPage from './pages/StandingsPage';
 import News from './pages/News';
-import NewsPage from './pages/NewPage';
+import NewsPage from './pages/NewsPage';
 import data from "./components/News.json"
 
 
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
   }, 
 
   {
-    path:"/NewsPage/",
+    path:"/NewPage/",
     element:<NewsPage/>
   }
 ]);

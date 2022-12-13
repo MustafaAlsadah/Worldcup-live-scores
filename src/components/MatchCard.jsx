@@ -6,7 +6,7 @@ import PlayingStatus from "./PlayingStatus";
 export default function MatchCard(props){
     const {date, status, stage, homeTeam, awayTeam, homeScore, awayScore} = props.matchProps;
     const homeTeamFlag = `src/assets/Flags/${homeTeam}.png`;
-    
+
     return(
         <div>
             <div className="match-card--container">

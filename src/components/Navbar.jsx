@@ -10,7 +10,7 @@ export default function Navbar(){
     const showSiderbar = ()=> setSidebar(!sidebar);
     return(
         <>        
-        <nav className="navbar">
+        <nav className=" page-nav">
             <img src="src\assets\world-cup-2022-logo.svg" alt="" />
             <Link to="#" classname= "menu-bar">
             <img classname="class" src="src\assets\hamburger_menu.svg" alt="" onClick={showSiderbar} />
@@ -25,8 +25,10 @@ export default function Navbar(){
               return (
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
+                    <div className="sideNavItem">
+                      <span className="mb-1 mx-1">{item.icon}</span>
+                      <span>{item.title}</span>
+                    </div>
                   </Link>
                 </li>
               );

@@ -8,7 +8,7 @@ import React from 'react';
 function HomePage() {
 
   let todayDate = new Date();
-  let dayNumber = todayDate.getDay();
+  let dayNumber = todayDate.getDate();
   todayDate = dayNumber.toString().length==2 ? "2022-"+(todayDate.getMonth()+1)+"-"+todayDate.getDate() : "2022-"+(todayDate.getMonth()+1)+"-0"+todayDate.getDate();
 
   React.useEffect(function(){
@@ -21,7 +21,7 @@ function HomePage() {
   let baseUrl = "https://api.football-data.org/v4/competitions/2000";
   
   const [todayMatchesArray, setTodayMatchesArray] = React.useState([]);
-  
+        
   function getMatches(){
       let dateValue = document.getElementById("matches-date").value;
       fetch(
@@ -40,6 +40,33 @@ function HomePage() {
 
   React.useEffect(function(){
       getMatches();
+
+      //LEAVE THIS PLEASE DON'T DELETE IT 
+    //   fetch(
+    //     `${baseUrl}/matches`,
+    //     {
+    //         headers: {
+    //             "X-Auth-Token": "418737ec05fd43bc9a0add42b8df40f2"
+    //         }
+    //     }
+    // ).then((res)=>{
+    //     return res.json();
+    // }).then((jsonOb)=>{
+    //     let videoId = 1;
+    //     for(let i=0; i<jsonOb.matches.length; i++){ 
+    //       if(jsonOb.matches[i].homeTeam.name=="Morocco" && jsonOb.matches[i].awayTeam.name=="Portugal"){
+    //         videoId =i+1;
+    //         break;
+    //       }else{
+    //         console.log("NA")
+    //       }
+    //     }
+        
+    //     let sampleUrl = `https://www.youtube.com/watch?v=FtHKVlNFvX8&list=PLczz3UIGL1XrItEVeri8ZBEyroLdNkjZh&index=${videoId}`;
+    //     let iframeMarkup = '<iframe width="100%" height="260" src="//www.youtube.com/embed/' + sampleUrl + '" frameborder="0" allowfullscreen></iframe>';
+
+    //     document.getElementById("oo").innerHTML=iframeMarkup;
+    // });
     }, []);
 
       let matchCards = todayMatchesArray.map((match)=>{
@@ -51,16 +78,30 @@ function HomePage() {
           awayTeam: match.awayTeam.name,
           homeScore: match.score.fullTime.home,
           awayScore: match.score.fullTime.away,
-          id: match.id
+          id: match.id,
+          youtubeIframeUrl: ""
         }
-        console.log(matchProps);
+
         return <MatchCard key={matchProps.id} matchProps={matchProps} />
       })
 
-      console.log(matchCards);
+      //Demo match
+      // let demoMatchProps = {
+      //   date: "2022-12-12",
+      //   status: "IN_PLAY",
+      //   stage: "GROUP_STAGE",
+      //   homeTeam: "Tunisia",
+      //   awayTeam: "France",
+      //   homeScore: 7,
+      //   awayScore: 0,
+      //   id: 4
+      // }
+      // matchCards.push(<MatchCard key={demoMatchProps.id} matchProps={demoMatchProps} />);
+
 
   return (
     <div className="homepage-container">
+      <div id='oo'></div>
       <head>
       <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
       </head>
@@ -75,6 +116,7 @@ function HomePage() {
         <div className='homepage-match-cards'>
           <img src="src\assets\matchCardLine.png" alt="" />
           {matchCards}
+          {matchCards.length==0 && <div className='no-matches-badge'><h1>There are no matches today!</h1><img src='src/assets/_Laeeb.png' width="40%" /></div>}
         </div>
     </div>
   )
