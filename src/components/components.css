@@ -74,3 +74,63 @@ span#status_badge{
     border-radius: 0% 0% 10% 10%;
     text-align: center;
 }
+
+.bracket-match-card--container{
+    display: flex;
+    align-items: center;
+    margin: 4% 0% 4% 0%;
+    height: auto;
+    font-size: medium;
+    
+}
+.bracket-match-score{
+    background-color: #7D1937;
+    font-size: 12px;
+    /* padding: 10% 28% 10% 28%; */
+    border-radius: 0% 0% 0% 0%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+
+
+}
+
+.bracket-line{
+    display: flex;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 8;
+}
+.quarter{
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+.semi{
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+.third-place{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+    justify-content: space-evenly;
+    
+}
+.finale{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    align-items: center;
+    
+}
+.bracketer{
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+}
+.bracket--container{
+    width: 100%;
+    display: grid;
+    table-layout: fixed;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    
+}

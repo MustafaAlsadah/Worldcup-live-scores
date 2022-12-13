@@ -5,19 +5,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Standingsbutton.css'
 
 
-const StandingsTitleAndButtons = () => {
-
+const StandingsTitleAndButtons = ({showGroups}) => {
   const [changeColor, setChangeColor] =useState(false)
   const [changeColor2, setChangeColor2] =useState(false)
 
 
   const handleClick = () => {
+    showGroups(true)
       setChangeColor(false)
       setChangeColor2(true)
 
   }
 
   const handleClick2 = () => {
+    showGroups(false)
     setChangeColor2(false)
     setChangeColor(true)
 
