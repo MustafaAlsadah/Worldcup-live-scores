@@ -28,7 +28,7 @@ const router = createBrowserRouter([
   },
 
   {
-    path: 'SpecificMatchPage',
+    path: 'SpecificMatchPage/:id',
     element: <SpecificMatchPage />,
   },
 ]);

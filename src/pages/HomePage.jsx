@@ -58,7 +58,10 @@ function HomePage() {
     };
     console.log(matchProps);
     return (
-      <Link to='/SpecificMatchPage' state={{ matchProps: matchProps }}>
+      <Link
+        to={`/SpecificMatchPage/${matchProps.id}`}
+        state={{ matchProps: matchProps }}
+      >
         <MatchCard key={matchProps.id} matchProps={matchProps} />
       </Link>
     );

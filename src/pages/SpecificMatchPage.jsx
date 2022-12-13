@@ -8,6 +8,7 @@ import { useLocation } from 'react-router-dom';
 import './MatchPageStyle.css';
 const SpecificMatchPage = () => {
   const location = useLocation();
+  console.log(location);
   const matchProps = location.state.matchProps;
   console.log(matchProps);
 
