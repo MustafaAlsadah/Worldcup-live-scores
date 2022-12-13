@@ -1,6 +1,7 @@
-.navbar{
+.page-nav{
     background-color: rgba(3, 207, 184, 1);
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 3% 6% 3% 6%;
 }
@@ -33,7 +34,7 @@
 .status-card{
     background-color: #8F1B3E;
     padding: 1% 4% 1% 4%;
-    border-radius: 10%;
+    border-radius: 1.5vw;
     display: flex;
 }
 
@@ -62,15 +63,86 @@ span#status_badge{
     background-color: #7D1937;
     font-size: 12px;
     /* padding: 10% 28% 10% 28%; */
-    border-radius: 10% 10% 0% 0%;
+    border-radius: 1.2vw 1.2vw 0vw 0vw;
     display: flex;
     align-items: baseline;
     justify-content: space-evenly;
+    width: max-content;
+}
+
+.top-status-container {
+    text-align: center;
+    width: 20vw;
+    font-size: x-small;
+    padding: 5% 0% 4% 0%;
+}
+
+.bottom-status-container {
+    padding: 6%;
 }
 
 .playing-status--bottom{
     background-color: #8F1B3E;
-    /* padding: 10% 64% 10% 64%; */
-    border-radius: 0% 0% 10% 10%;
+    border-radius: 0% 0% 1.2vw 1.2vw;
     text-align: center;
+}
+
+.bracket-match-card--container{
+    display: flex;
+    align-items: center;
+    margin: 4% 0% 4% 0%;
+    height: auto;
+    font-size: medium;
+    
+}
+.bracket-match-score{
+    background-color: #7D1937;
+    font-size: 12px;
+    /* padding: 10% 28% 10% 28%; */
+    border-radius: 0% 0% 0% 0%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+
+
+}
+
+.bracket-line{
+    display: flex;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 8;
+}
+.quarter{
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+.semi{
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+.third-place{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+    justify-content: space-evenly;
+    
+}
+.finale{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    align-items: center;
+    
+}
+.bracketer{
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+}
+.bracket--container{
+    width: 100%;
+    display: grid;
+    table-layout: fixed;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    
 }

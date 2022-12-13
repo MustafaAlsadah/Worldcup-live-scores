@@ -3,8 +3,7 @@ import React from 'react'
 import TeamCardTable from './TeamCardTable';
 
 const ScheduleTable = ({probs}) => {
-  const heders=["Team","PI","W","D","L","+/-","PTS"];
-  console.log("heelo")
+  const heders=["Team","W","D","L","+/-","PTS"];
   
 //   probs.map((standsItem,index)=>{
 //     console.log(standsItem.team.name)
@@ -17,7 +16,7 @@ const ScheduleTable = ({probs}) => {
         <tr> 
           {heders.map((hedersItem,index)=>(
             <th key={index}>
-              {hedersItem}
+              {hedersItem} 
             </th>
           ))}
 
@@ -28,9 +27,6 @@ const ScheduleTable = ({probs}) => {
           <tr key={index}>
             <td>
               <TeamCardTable teamName={standsItem.team.name} />
-            </td>
-            <td>
-              {standsItem.playedGames}
             </td>
             <td>
               {standsItem.won}

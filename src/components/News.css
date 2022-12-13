@@ -7,14 +7,42 @@
     margin-top: 5%;
     width: 90%;
     margin-left: 1%;
+    border-radius: 1.5vw;
 }
 
 .img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     width: 100%;
-    margin-top: 2px;
-    margin-left: 8px;
+    border-radius: 10%;
 }
 
-.item2 {
-    font-size: 14px;
+@media only screen and (max-width: 600px) {
+    .item2 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .item2 {
+        font-size: 25px;
+    }
+}
+
+.news-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    color: white;
+}
+
+.horizontal-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

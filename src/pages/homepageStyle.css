@@ -36,6 +36,7 @@ a:hover {
   color: white;
 }
 
+<<<<<<< HEAD
 ::-webkit-calendar-picker-indicator {
   background-color: #40bdad;
   border-radius: 3px;
@@ -45,4 +46,15 @@ a:hover {
 .homepage-match-cards {
   padding-top: 2%;
   color: white;
+=======
+}
+
+.no-matches-badge{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+    text-align: center;
+    justify-content: space-around;
+>>>>>>> d1e50af28888651c7fb503a4ec082165f9c333ef
 }

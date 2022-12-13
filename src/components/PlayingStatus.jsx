@@ -21,14 +21,19 @@ export default function PlayingStatus(props){
     return(
         <div className="playing-status-container">
             <div className="playing-status--top">
-                 {gameStatus=="FINISHED" && <img id="circle-img" src={grayCircle } alt="" />}
-                 <span className="green-circle-img">{matchIsInPlay && <img id="circle-img" src={greenCircle} alt="" />}</span>
-                 &nbsp;
-                 <span id="status-badge">{badgeText}</span>
                  
+                 <div className="top-status-container">
+                    {gameStatus=="FINISHED" && <img id="circle-img" src={grayCircle } alt="" />}
+                    <span className="green-circle-img">{matchIsInPlay && <img id="circle-img" src={greenCircle} alt="" />}</span>
+                    &nbsp;&nbsp;
+                    <span id="status-badge">{badgeText}</span>
+                 </div>
+
             </div>
             <div className="playing-status--bottom">
-                {props.homeScore}:{props.awayScore}
+                <div className="bottom-status-container">
+                    {props.homeScore}&nbsp;:&nbsp;{props.awayScore}
+                </div>
             </div>
         </div>
     )

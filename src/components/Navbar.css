@@ -65,6 +65,9 @@
     align-items: center;
 }
 
-span {
-    margin-left: 16px;
+.sideNavItem{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 6vw;
 }
