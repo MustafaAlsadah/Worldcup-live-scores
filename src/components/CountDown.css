@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.countDownBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 56.7px;
+  height: 94.93px;
+  border-radius: 6.59259px;
+  background: #8f1b3e;
+  margin: 0 4px;
+}
+
+.countDownBox__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5.27407px 21.0963px;
+  gap: 13.19px;
+
+  width: 48.79px;
+  height: 48.79px;
+
+  background: #6d1430;
+  color: #40bdad;
+  border-radius: 2.63704px;
+
+  margin-left: 0;
+}
+
+#root
+  > div
+  > div.container
+  > div:nth-child(1)
+  > div.countDownBox__number
+  > span {
+  margin-left: 0 !important;
+}
+#root
+  > div
+  > div.container
+  > div:nth-child(2)
+  > div.countDownBox__number
+  > span {
+  margin-left: 0 !important;
+}
+#root
+  > div
+  > div.container
+  > div:nth-child(3)
+  > div.countDownBox__number
+  > span {
+  margin-left: 0 !important;
+}
+#root
+  > div
+  > div.container
+  > div:nth-child(4)
+  > div.countDownBox__number
+  > span {
+  margin-left: 0 !important;
+}
+
+.countDownBox__text {
+  margin-top: 10px;
+}
