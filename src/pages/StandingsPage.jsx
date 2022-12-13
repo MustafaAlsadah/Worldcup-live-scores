@@ -5,8 +5,10 @@ import ScheduleTable from '../components/ScheduleTable'
 import CollapseListStandings from '../components/CollapseListStandings'
 import StandingsTitleAndButtons from '../components/StandingsTitleAndButtons'
 import "../components/components.css"
-
+import StandingsBracket from '../components/StandingsBracket'
 const StandingsPage = () => {
+
+    const [showGroups, setShowGroups] = useState(true);
 
     const[standing,setStanding] =useState([]);
 
@@ -41,61 +43,23 @@ const StandingsPage = () => {
         return standingProps ;
     });
 
-//     function getTabels(){
-//         let tabels =[]
-//         {standings.forEach((stand)=>{
-//            tabels.push( <ScheduleTable probs={stand.teams} />) 
-//            { console.log(stand)}
-// })}
-//         // console.log(tabels);
-//     }
-
-    
-
-    // function gwtstandings(){
-    //     return standings;
-    // }
-
-      
-
-    //   let standings = standing.map((standing)=>{
-    //     let group=standing.group
-    //     let teamNames= [standing.table[0].team.name,standing.table[1].team.name,standing.table[2].team.name,standing.table[3].team.name]
-        
-    //   });
-
-
     return (
         <div >
             <Navbar />
-            <StandingsTitleAndButtons />
+            <StandingsTitleAndButtons showGroups={setShowGroups} />
 
                 <div>
                     
                 {/* {standings.map((stand,index)=>( */}
                 {/* {console.log(standings)}. */}
-                <CollapseListStandings probs={standings} /> 
-                {/* ))} */}
+                {showGroups&&<CollapseListStandings probs={standings} /> }
+                
+                {!showGroups&&<StandingsBracket/>}
                 </div>
 
         </div>
       )
 
 
-//   return (
-//     <div className="warpper">
-//         <Navbar />
-//         <div className="warpper">
-//             <div className="accordion">
-                
-//             {/* {standings.map((stand,index)=>( */}
-//             {/* {console.log(standings)}. */}
-//             <CollapseListStandings probs={standings} /> 
-//             {/* ))} */}
-//             </div>
-//         </div>
-//     </div>
-//   )
-}
-
+    }
 export default StandingsPage
