@@ -12,7 +12,7 @@ const Countdown = ({ date }) => {
 
   const minuteRenderer = ({ minutes }) => {
     return <span>{minutes}</span>;
-  };
+  }; 
   const secondRenderer = ({ seconds }) => {
     return <span>{seconds}</span>;
   };

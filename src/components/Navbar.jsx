@@ -3,7 +3,6 @@ import { useState } from 'react';
 import './components.css';
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
 export default function Navbar() {
@@ -11,7 +10,7 @@ export default function Navbar() {
   const showSiderbar = () => setSidebar(!sidebar);
   return (
     <>
-      <nav className='navbar'>
+      <nav className='navbar page-nav'>
         <img src='..\src\assets\world-cup-2022-logo.svg' alt='' />
         {/* <Link to='#' classname='menu-bar'> */}
         <img
@@ -29,9 +28,11 @@ export default function Navbar() {
             return (
               <li key={index} className={item.cName}>
                 <Link to={item.path}>
-                  {item.icon}
-                  <span>{item.title}</span>
-                </Link>
+                    <div className="sideNavItem">
+                      <span className="mb-1 mx-1">{item.icon}</span>
+                      <span>{item.title}</span>
+                    </div>
+                  </Link>
               </li>
             );
           })}
@@ -39,40 +40,4 @@ export default function Navbar() {
       </nav>
     </>
   );
-=======
-import { SidebarData } from "./SidebarData";
-import './Navbar.css'
-export default function Navbar(){
-    const [sidebar , setSidebar]= useState(false);
-    const showSiderbar = ()=> setSidebar(!sidebar);
-    return(
-        <>        
-        <nav className=" page-nav">
-            <img src="src\assets\world-cup-2022-logo.svg" alt="" />
-            <Link to="#" classname= "menu-bar">
-            <img classname="class" src="src\assets\hamburger_menu.svg" alt="" onClick={showSiderbar} />
-            </Link>
-           
-
-        </nav>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}> 
-   <ul className='nav-menu-items' onClick={showSiderbar}>
-     <li className='navbar-toggle'></li>
-     {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    <div className="sideNavItem">
-                      <span className="mb-1 mx-1">{item.icon}</span>
-                      <span>{item.title}</span>
-                    </div>
-                  </Link>
-                </li>
-              );
-            })}
-  </ul>
-</nav>
-        </>
-    )
->>>>>>> d1e50af28888651c7fb503a4ec082165f9c333ef
 }

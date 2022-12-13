@@ -3,20 +3,10 @@ import TeamCard from './TeamCard';
 import ScheduledStatus from './ScheduledStatus';
 import PlayingStatus from './PlayingStatus';
 
-<<<<<<< HEAD
 export default function MatchCard(props) {
   const { date, status, stage, homeTeam, awayTeam, homeScore, awayScore } =
     props.matchProps;
   const homeTeamFlag = `src/assets/Flags/${homeTeam}.png`;
-=======
-export default function MatchCard(props){
-    const {date, status, stage, homeTeam, awayTeam, homeScore, awayScore} = props.matchProps;
-    const homeTeamFlag = `src/assets/Flags/${homeTeam}.png`;
-
-    return(
-        <div>
-            <div className="match-card--container">
->>>>>>> d1e50af28888651c7fb503a4ec082165f9c333ef
 
   return (
     <div>
