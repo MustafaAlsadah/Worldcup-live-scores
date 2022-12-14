@@ -110,12 +110,14 @@ span#status_badge{
 .bracket-line{
     display: flex;
     align-items: center;
+    text-align: center;
     grid-column-start: 1;
     grid-column-end: 8;
 }
 .quarter{
     grid-column-start: 2;
     grid-column-end: 7;
+    
 }
 .semi{
     grid-column-start: 3;
@@ -130,15 +132,16 @@ span#status_badge{
 }
 .finale{
     grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-end: 6;
     align-items: center;
     
 }
 .bracketer{
     grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-end: 5; 
+    max-height: 7vh;
 
-}
+ }
 .bracket--container{
     width: 100%;
     display: grid;
