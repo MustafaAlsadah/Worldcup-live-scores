@@ -29,7 +29,7 @@ const StandingsBracket = () => {
           });
     }
 
-    let matchCards = matches.map((match)=>{
+    let matchCards = matches.map((match,index)=>{
 
         let matchProps = {
           date: match.utcDate,
@@ -44,12 +44,22 @@ const StandingsBracket = () => {
           id: match.id
         }
         //console.log(match);
+        if(matchProps.homeTLA==null ||matchProps.awayTLA==null){
+            console.log(matchProps)
+        matchProps.homeTLA="null"
+        matchProps.awayTLA="null"
+        return <MatchCardBracket key={matchProps.id} matchProps={matchProps} />
+
+        }
+        
+
         return <MatchCardBracket key={matchProps.id} matchProps={matchProps} />
       })
     useEffect(function(){
         getMatches();
       },[]);
 
+      {console.log(matchCards.length)}
 
 
     return (
@@ -65,32 +75,32 @@ const StandingsBracket = () => {
                     </div>
                     <div className='bracket-line quarter'>
                     {matchCards[matchCards.length-7]}
-                    Quarter-Finals
+                    Quarter Finals
                     {matchCards[matchCards.length-8]}
                     </div>
                     <div className='bracket-line semi'>
-                        Semi-Finals
+                        {/* Semi-Finals */}
                     {matchCards[matchCards.length-4]}
                     </div>
                     <img className='bracketer' src="src\assets\verticalLine.png" alt="" />
-                    <div className='bracket-line third-place'>
+                    {/* <div className='bracket-line third-place'>
                         
                     {matchCards[matchCards.length-2]}
-                    Third-Place
-                    </div>
+                    Third Place
+                    </div> */}
                     
                     <div className='bracket-line finale'>
-                        Finals
+                        {/* Finals */}
                     {matchCards[matchCards.length-1]}
                     </div>
                     <img className='bracketer' src="src\assets\verticalLine.png" alt="" />
                     <div className='bracket-line semi'>
-                        Semi-Finals
+                        {/* Semi-Finals */}
                     {matchCards[matchCards.length-3]}
                     </div>
                     <div className='bracket-line quarter'>
                     {matchCards[matchCards.length-5]}
-                    Quarter-Finals
+                    Quarter Finals
                     {matchCards[matchCards.length-6]}
                 </div>
                 <div className='bracket-line'>
