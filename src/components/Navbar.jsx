@@ -11,15 +11,17 @@ export default function Navbar() {
   return (
     <>
       <nav className='navbar page-nav'>
-        <img src='..\src\assets\world-cup-2022-logo.svg' alt='' />
+        <div className='page-na'>
+        <img src='..\src\assets\world-cup-2022-logo.svg' className='mx-3' alt='' />
         {/* <Link to='#' classname='menu-bar'> */}
         <img
-          classname='class'
+          className=' mx-3'
           src='..\src\assets\hamburger_menu.svg'
           alt=''
           onClick={showSiderbar}
         />
         {/* </Link> */}
+        </div>
       </nav>
       <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
         <ul className='nav-menu-items' onClick={showSiderbar}>

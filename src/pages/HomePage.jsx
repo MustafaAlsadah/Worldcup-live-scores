@@ -8,21 +8,24 @@ import { Link } from 'react-router-dom';
 
 function HomePage() {
   let todayDate = new Date();
-  let dayNumber = todayDate.getDate();
+  let dayNumber = todayDate.getDate(); 
   todayDate = dayNumber.toString().length==2 ? "2022-"+(todayDate.getMonth()+1)+"-"+todayDate.getDate() : "2022-"+(todayDate.getMonth()+1)+"-0"+todayDate.getDate();
+
 
   React.useEffect(function () {
     document.getElementById('matches-date').setAttribute('value', todayDate);
+    console.log("DATE IS SET");
     document.getElementById('matches-date').onchange = function () {
       getMatches();
     };
-  }, []);
+  }, []); 
 
   let baseUrl = 'https://api.football-data.org/v4/competitions/2000';
 
   const [todayMatchesArray, setTodayMatchesArray] = React.useState([]);
 
   function getMatches() {
+    
     let dateValue = document.getElementById('matches-date').value;
     fetch(`${baseUrl}/matches?dateFrom=${dateValue}&dateTo=${dateValue}`, {
       headers: {
@@ -38,6 +41,7 @@ function HomePage() {
   }
 
   React.useEffect(function () {
+    // document.getElementById('matches-date').setAttribute('value', todayDate);
     getMatches();
   }, []);
 
@@ -53,7 +57,6 @@ function HomePage() {
       group: match.group,
       id: match.id,
     };
-    console.log(matchProps);
     return (
       <Link
         to={`/SpecificMatchPage/${matchProps.id}`}
@@ -64,7 +67,6 @@ function HomePage() {
     );
   });
 
-  console.log(matchCards);
 
   return (
     <div className='homepage-container'>
@@ -74,19 +76,19 @@ function HomePage() {
           content='upgrade-insecure-requests'
         />
       </head>
-      <Navbar/>
-        <div className='homepage-header'>
-          <h2>Matches Schedule</h2>
-          <input type="date" name='matches-date' id="matches-date" />
-        </div>
-        <div className='horizontal-flex'>
-          <img src="src\assets\divider.png" alt="" width="90%" />
-        </div>
-        <div className='homepage-match-cards'>
-          <img src="src\assets\matchCardLine.png" alt="" />
-          {matchCards}
-          {matchCards.length==0 && <div className='no-matches-badge'><h1>There are no matches today!</h1><img src='src/assets/_Laeeb.png' width="40%" /></div>}
-        </div>
+      <Navbar />
+      <div className='homepage-header'>
+        <h2>Matches Schedule</h2>
+        <input type='date' name='matches-date' id='matches-date' />
+      </div>
+      <div className='horizontal-flex'>
+        <img src='src\assets\divider.png' alt='' width='90%' />
+      </div>
+      <div className='homepage-match-cards'>
+        <img src='src\assets\matchCardLine.png' alt='' />
+        {matchCards}
+        {matchCards.length==0 && <div className='no-matches-badge'><h1>There are no matches today!</h1><img src='src/assets/_Laeeb.png' width="40%" /></div>}
+      </div>
     </div>
   );
 }
